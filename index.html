@@ -862,6 +862,19 @@
     .alarm .allll { font-size: 17px; }
     .alarm .allll b { color: var(--blush); letter-spacing: .02em; }
     .alarm .gif { margin-top: 26px; background: var(--cream); }
+    .bags-figure {
+      position: relative;
+      width: min(88%, 300px);
+      margin: 24px auto 18px;
+    }
+    .bags-figure::before {
+      content: "";
+      position: absolute; inset: 10% -6% 4%;
+      border-radius: 50%;
+      background: radial-gradient(closest-side, rgba(255, 45, 149, .35), transparent);
+      filter: blur(10px);
+    }
+    .bags-figure img { position: relative; width: 100%; height: auto; }
     .packing { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 12px 0 18px; padding: 0; list-style: none; }
     .packing li {
       padding: 8px 14px; border-radius: 999px;
@@ -1420,15 +1433,9 @@
                   <p class="alarm-big">Once we leave my house Saturday morning, <span>WE ARE NOT COMING BACK.</span></p>
                   <p class="allll">So please take <b>ALLLLLLL</b> of your belongings with you.</p>
 
-                  <!-- 🔁 REPLACE IMAGE: too-many-bags  → drop your file at images/too-many-bags.gif -->
-                  <figure class="gif reveal" data-img="too-many-bags">
-                    <img src="images/too-many-bags.gif" alt="A woman carrying an absurd amount of luggage, bags, and purses" loading="lazy" />
-                    <div class="gif-ph" aria-hidden="true">
-                      <div class="ph-icon">🧳👜🛍️</div>
-                      <div class="ph-label">GIF goes here</div>
-                      <code>too-many-bags</code>
-                      <div class="ph-desc">Woman carrying WAY too many bags</div>
-                    </div>
+                  <!-- Too-many-bags illustration: images/too-many-bags.webp -->
+                  <figure class="bags-figure reveal">
+                    <img src="images/too-many-bags.webp" width="700" height="1040" alt="Illustration of a smiling woman in a Phillies cap and cream sweatsuit, loaded down with shopping bags, purses, and a rolling suitcase" loading="lazy" />
                   </figure>
 
                   <ul class="packing">

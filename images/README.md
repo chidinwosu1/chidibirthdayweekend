@@ -4,7 +4,6 @@ Drop your files in this folder using these **exact names**. The site will show t
 
 | File name                   | Where it shows up                                   |
 |-----------------------------|-----------------------------------------------------|
-| `too-many-bags.gif`         | Saturday — inside the "VERY IMPORTANT" card         |
 | `bathroom-waiting.gif`      | Saturday — under "establish residency"              |
 
 Using a `.jpg`, `.png`, or `.webp` instead? Search `index.html` for `REPLACE IMAGE: <name>` and change the file extension in the `src` on the line below it.

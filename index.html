@@ -699,6 +699,28 @@
     }
     .fun h2 em { display: block; font-weight: 400; font-family: var(--script); font-size: 1.15em; line-height: 1.1; margin-top: 4px; }
     .fun .gif { margin-top: 36px; }
+    .dance-figure {
+      position: relative;
+      width: min(78%, 320px);
+      margin: 30px auto 0;
+    }
+    .dance-figure::before {
+      content: "";
+      position: absolute; inset: 8% -10% 6%;
+      border-radius: 50%;
+      background: radial-gradient(closest-side, rgba(255, 255, 255, .45), transparent);
+      filter: blur(8px);
+    }
+    .dance-figure::after {
+      content: "";
+      position: absolute; left: 10%; right: 10%; bottom: -8px; height: 22px;
+      border-radius: 50%;
+      background: radial-gradient(closest-side, rgba(14, 11, 13, .35), transparent);
+    }
+    .dance-figure img {
+      position: relative; z-index: 1; width: 100%; height: auto;
+      filter: drop-shadow(0 14px 22px rgba(14, 11, 13, .3));
+    }
     .fun-arrow { margin-top: 24px; font-size: 12px; letter-spacing: .32em; text-transform: uppercase; font-weight: 700; }
     .marquee {
       margin-top: 44px;
@@ -1283,15 +1305,9 @@
       <div class="wrap">
         <h2 class="reveal">Okay... <em>NOW for the fun part!</em> 💃🏾</h2>
 
-        <!-- 🔁 REPLACE IMAGE: dancing  → drop your file at images/dancing.gif -->
-        <figure class="gif tilt-r reveal" data-img="dancing">
-          <img src="images/dancing.gif" alt="A woman dancing and celebrating" loading="lazy" />
-          <div class="gif-ph" aria-hidden="true">
-            <div class="ph-icon">💃🏾</div>
-            <div class="ph-label">GIF goes here</div>
-            <code>dancing</code>
-            <div class="ph-desc">Woman dancing &amp; celebrating</div>
-          </div>
+        <!-- Dancing illustration: images/dancing.webp -->
+        <figure class="dance-figure reveal">
+          <img src="images/dancing.webp" width="700" height="1103" alt="Illustration of a smiling woman dancing in a gold fringe dress and gold heels" loading="lazy" />
         </figure>
 
         <div class="fun-arrow reveal">The Itinerary ↓</div>

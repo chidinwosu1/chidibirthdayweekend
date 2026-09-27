@@ -4,7 +4,6 @@ Drop your files in this folder using these **exact names**. The site will show t
 
 | File name                   | Where it shows up                                   |
 |-----------------------------|-----------------------------------------------------|
-| `dancing.gif`               | "NOW for the fun part!" break                       |
 | `too-many-bags.gif`         | Saturday — inside the "VERY IMPORTANT" card         |
 | `bathroom-waiting.gif`      | Saturday — under "establish residency"              |
 

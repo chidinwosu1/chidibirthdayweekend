@@ -4,7 +4,6 @@ Drop your files in this folder using these **exact names**. The site will show t
 
 | File name                   | Where it shows up                                   |
 |-----------------------------|-----------------------------------------------------|
-| `kermit-typing.gif`         | Welcome — under "Project Manager Chidi"             |
 | `i-said-what-i-said.gif`    | A Few Things to Know — under the "ministry" line    |
 | `spend-dat-shit.gif`        | Let's Talk Money — under the heading                |
 | `dancing.gif`               | "NOW for the fun part!" break                       |

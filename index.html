@@ -375,6 +375,32 @@
       line-height: 1.4;
     }
     .pm-callout strong { font-style: normal; color: var(--fuchsia-deep); }
+    .pm-figure {
+      position: relative;
+      max-width: 360px;
+      margin: 34px auto 30px;
+      padding-top: 10px;
+    }
+    .pm-arch {
+      position: absolute;
+      left: 16%; right: 6%; top: 12%; bottom: 84px;
+      border-radius: 999px 999px 18px 18px;
+      background: radial-gradient(80% 60% at 50% 30%, #fff, var(--blush) 70%);
+      border: 1px solid var(--blush-2);
+    }
+    .pm-arch::before {
+      content: ""; position: absolute; inset: 7px;
+      border: 1px solid rgba(255, 45, 149, .35);
+      border-radius: 999px 999px 12px 12px;
+    }
+    .pm-figure img {
+      position: relative; width: 100%; height: auto;
+      filter: drop-shadow(0 16px 24px rgba(14, 11, 13, .25));
+    }
+    .pm-figure figcaption {
+      font-family: var(--script); font-size: 28px; line-height: 1.1;
+      text-align: center; color: var(--fuchsia-deep); margin-top: 8px;
+    }
     .weather-card {
       margin-top: 30px;
       background: var(--black);
@@ -1047,15 +1073,10 @@
 
         <p class="pm-callout reveal">So <strong>Birthday Chidi</strong> has had to become <strong>Project Manager Chidi</strong> for a moment so we can get everything locked in.</p>
 
-        <!-- 🔁 REPLACE IMAGE: kermit-typing  → drop your file at images/kermit-typing.gif -->
-        <figure class="gif reveal" data-img="kermit-typing">
-          <img src="images/kermit-typing.gif" alt="Kermit the Frog typing furiously on a keyboard" loading="lazy" />
-          <div class="gif-ph" aria-hidden="true">
-            <div class="ph-icon">🐸⌨️</div>
-            <div class="ph-label">GIF goes here</div>
-            <code>kermit-typing</code>
-            <div class="ph-desc">Kermit typing furiously</div>
-          </div>
+        <!-- Project Manager Chidi illustration: images/project-manager-chidi.webp -->
+        <figure class="pm-figure reveal">
+          <div class="pm-arch" aria-hidden="true"></div>
+          <img src="images/project-manager-chidi.webp" width="800" height="960" alt="Illustration of a glamorous woman in a gold suit and glasses working on a laptop, with a designer bag, notebook, and an iced coffee labeled Project Manager" loading="lazy" />
           <figcaption>Project Manager Chidi, reporting for duty</figcaption>
         </figure>
 

@@ -456,6 +456,19 @@
     .sermon-big .ministry { display: block; font-style: italic; font-weight: 400; color: var(--blush); margin-top: 6px; }
     .sermon .gif { margin-top: 34px; }
     .sermon .gif figcaption { color: var(--muted); }
+    .said-figure {
+      position: relative;
+      max-width: 380px;
+      margin: 30px auto 6px;
+    }
+    .said-figure::before {
+      content: "";
+      position: absolute; inset: 12% 4% 4%;
+      border-radius: 50%;
+      background: radial-gradient(closest-side, rgba(255, 45, 149, .45), transparent);
+      filter: blur(10px);
+    }
+    .said-figure img { position: relative; width: 100%; height: auto; }
     .salad {
       font-family: var(--serif);
       font-size: 21px;
@@ -1110,16 +1123,9 @@
           <div class="sermon-kicker">Let the church say amen</div>
           <p class="sermon-big">We are <span class="no">NOT</span> doing the <span class="ministry">"let's just split the bill evenly" ministry.</span></p>
 
-          <!-- 🔁 REPLACE IMAGE: i-said-what-i-said  → drop your file at images/i-said-what-i-said.gif -->
-          <figure class="gif tilt-r reveal" data-img="i-said-what-i-said">
-            <img src="images/i-said-what-i-said.gif" alt="NeNe Leakes saying 'I said what I said'" loading="lazy" />
-            <div class="gif-ph" aria-hidden="true">
-              <div class="ph-icon">💅🏾</div>
-              <div class="ph-label">GIF goes here</div>
-              <code>i-said-what-i-said</code>
-              <div class="ph-desc">NeNe Leakes: "I said what I said."</div>
-            </div>
-            <figcaption>I said what I said.</figcaption>
+          <!-- "I said what I said" illustration: images/i-said-what-i-said.webp -->
+          <figure class="said-figure reveal">
+            <img src="images/i-said-what-i-said.webp" width="800" height="960" alt="Illustration of a glamorous woman in sunglasses and a gold dress, seated in a gold chair with champagne, and a speech bubble that says 'I said what I said'" loading="lazy" />
           </figure>
 
           <p class="salad">If one person ordered a side salad and a Diet Coke, she is <em>not</em> sponsoring somebody else's surf &amp; turf and three margaritas.</p>

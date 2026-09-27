@@ -1,9 +1,15 @@
-# Reaction GIFs / images
+# Site illustrations
 
-Drop your files in this folder using these **exact names**. The site will show them automatically; until then, a labeled placeholder shows in each spot.
+Every image spot on the site is filled. To swap one, replace the file below with a new one using the **same file name** (or change the `src` in `index.html`).
 
-| File name                   | Where it shows up                                   |
-|-----------------------------|-----------------------------------------------------|
-| `bathroom-waiting.gif`      | Saturday — under "establish residency"              |
+| File                          | Where it shows up                                        |
+|-------------------------------|----------------------------------------------------------|
+| `hero-birthday-girl.webp`     | Hero — sitting in the glowing arch                        |
+| `project-manager-chidi.webp`  | Welcome — under "Project Manager Chidi"                  |
+| `i-said-what-i-said.webp`     | A Few Things to Know — under the "ministry" line         |
+| `spend-dat.webp`              | Costs — under "Let's Talk Money"                         |
+| `dancing.webp`                | Friday — "NOW for the fun part!" pink section            |
+| `too-many-bags.webp`          | Saturday — inside the "VERY IMPORTANT" card              |
+| `bathroom-waiting.webp`       | Saturday — under "establish residency"                   |
 
-Using a `.jpg`, `.png`, or `.webp` instead? Search `index.html` for `REPLACE IMAGE: <name>` and change the file extension in the `src` on the line below it.
+Transparent PNG/WebP images look best. If an image has a fake checkerboard "transparent" background baked in, it will need cleaning up first.

@@ -554,6 +554,27 @@
     .who.cover { background: transparent; border: 1px solid rgba(250,244,236,.3); color: var(--cream); }
     .who.cover li { border-top-color: rgba(250,244,236,.14); }
     .who.cover li::before { content: "✓"; color: var(--fuchsia); font-weight: 700; }
+    .cheap-date {
+      margin-top: 18px;
+      padding: 24px 22px 22px;
+      border-radius: var(--radius);
+      background: var(--blush);
+      color: var(--ink);
+      text-align: center;
+      position: relative;
+      transform: rotate(-1deg);
+      box-shadow: 0 20px 40px -24px rgba(255, 45, 149, .6);
+    }
+    .js .cheap-date.reveal { transform: translateY(26px) rotate(-1deg); }
+    .js .cheap-date.reveal.in { transform: rotate(-1deg); }
+    .cheap-date .cd-kicker {
+      font-family: var(--script); font-size: 34px; line-height: 1; color: var(--fuchsia-deep); margin-bottom: 6px;
+    }
+    .cheap-date em { color: var(--fuchsia-deep); font-weight: 700; }
+    .cheap-date .cd-big {
+      font-family: var(--serif); font-weight: 900; font-size: clamp(24px, 7vw, 32px); line-height: 1.15; margin-top: 10px;
+    }
+    .cheap-date .cd-big span { color: var(--fuchsia); font-style: italic; }
     .spa-note {
       margin-top: 18px;
       font-size: 14px; line-height: 1.55;
@@ -1159,11 +1180,18 @@
             <h3>You'll Cover <span aria-hidden="true">💳</span></h3>
             <ul>
               <li>Your food &amp; drinks</li>
+              <li><strong>My meals</strong> 🙂</li>
               <li>Optional massage/facial/spa treatments</li>
               <li>Your portion of shared Ubers</li>
               <li>Any other optional purchases</li>
             </ul>
           </div>
+        </div>
+
+        <div class="cheap-date reveal">
+          <div class="cd-kicker">P.S.</div>
+          <p>Yes ladies, the birthday girl's meals are on <em>you</em> this weekend. 🙂</p>
+          <p class="cd-big">Don't worry... I'm a cheap date. <span>LOL</span></p>
         </div>
 
         <p class="spa-note reveal"><span aria-hidden="true">ⓘ</span><span>The $95 spa admission covers access to the spa facilities. Massages, facials, and other treatments are completely optional and cost extra.</span></p>

@@ -975,6 +975,66 @@
     .sign-off h2 em { display: block; font-style: italic; color: var(--fuchsia); font-weight: 400; text-transform: none; }
     .sign-off .d { margin-top: 20px; font-size: 12.5px; letter-spacing: .3em; font-weight: 700; text-transform: uppercase; color: var(--nude); }
 
+
+    /* ============================================================
+       AT A GLANCE + PAGES
+       ============================================================ */
+    .glance { background: var(--cream); padding: 56px 0 44px; }
+    .glance-title { font-size: clamp(34px, 9.5vw, 48px); margin-bottom: 20px; }
+    .glance-list {
+      list-style: none; margin: 0; padding: 6px 20px;
+      background: #fff; border-radius: var(--radius);
+      box-shadow: 0 20px 50px -30px rgba(14, 11, 13, .35);
+    }
+    .glance-list li {
+      display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start;
+      padding: 16px 0; border-top: 1px dashed var(--blush-2);
+    }
+    .glance-list li:first-child { border-top: 0; }
+    .g-ico { width: 40px; height: 40px; border-radius: 50%; background: var(--blush); display: grid; place-items: center; font-size: 18px; }
+    .glance-list strong { display: block; font-family: var(--serif); font-size: 19px; line-height: 1.2; margin-bottom: 3px; }
+    .glance-list div span { display: block; font-size: 15px; line-height: 1.5; color: var(--muted); }
+    .glance-list b { color: var(--fuchsia-deep); }
+    .picker-label {
+      margin: 36px 0 14px; text-align: center;
+      font-family: var(--script); font-size: 34px; line-height: 1.1; color: var(--fuchsia-deep);
+    }
+    .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .tile {
+      display: flex; flex-direction: column; gap: 2px;
+      padding: 16px 16px 18px; border-radius: 18px;
+      background: #fff; border: 1px solid var(--blush-2);
+      color: var(--ink); text-decoration: none;
+      transition: transform .25s var(--ease), background .25s, color .25s, border-color .25s;
+    }
+    .tile:active { transform: scale(.97); }
+    .t-num { font-size: 11px; font-weight: 700; letter-spacing: .2em; color: var(--fuchsia-deep); }
+    .t-name { font-family: var(--serif); font-weight: 900; font-size: 24px; line-height: 1.15; }
+    .t-sub { font-size: 13px; line-height: 1.35; color: var(--muted); }
+    .tile.active { background: var(--black); border-color: var(--black); color: var(--cream); }
+    .tile.active .t-num { color: var(--fuchsia); }
+    .tile.active .t-sub { color: var(--blush); }
+
+    .js .panel { display: none; }
+    .js .panel.active { display: block; animation: panelIn .6s var(--ease); }
+    @keyframes panelIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .next-page { margin-top: 44px; }
+    .friday .next-page { margin-top: 0; padding-bottom: 84px; }
+    .next-btn {
+      display: flex; flex-direction: column; align-items: center; gap: 2px;
+      padding: 18px 22px; border-radius: 22px;
+      background: var(--black); color: var(--cream);
+      text-decoration: none; text-align: center;
+      box-shadow: 0 18px 40px -20px rgba(14, 11, 13, .6);
+      transition: transform .25s var(--ease);
+    }
+    .next-btn:active { transform: scale(.98); }
+    .next-page.dark .next-btn { background: var(--fuchsia); color: #fff; box-shadow: 0 18px 40px -18px var(--fuchsia); }
+    .np-k { font-size: 11px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: var(--fuchsia); }
+    .next-page.dark .np-k { color: #fff; opacity: .85; }
+    .np-v { font-family: var(--serif); font-weight: 700; font-size: 22px; line-height: 1.25; }
+
     /* ============================================================
        FLOATING NAV + BACK TO TOP
        ============================================================ */
@@ -1117,14 +1177,51 @@
       </div>
     </div>
 
-    <a class="scroll-cue" href="#welcome" aria-label="Scroll to welcome">Scroll<i></i></a>
+    <a class="scroll-cue" href="#glance" aria-label="Scroll down">Scroll<i></i></a>
   </header>
 
   <main>
+    <!-- ============================================================
+         AT A GLANCE + PAGE PICKER
+         ============================================================ -->
+    <section class="glance" id="glance">
+      <div class="wrap">
+        <div class="eyebrow">For my skimmers 👀</div>
+        <h2 class="glance-title">The Quick Version</h2>
+        <ul class="glance-list">
+          <li>
+            <span class="g-ico" aria-hidden="true">💸</span>
+            <div><strong>$202 per person</strong><span>$101 + final RSVP by <b>Oct 15</b> · $101 by <b>Nov 15</b></span></div>
+          </li>
+          <li>
+            <span class="g-ico" aria-hidden="true">🎶</span>
+            <div><strong>Friday, Dec 18</strong><span>Leaving Delaware <b>no later than 8:00 PM</b> · City Winery by 9:00 · Musiq at 9:30</span></div>
+          </li>
+          <li>
+            <span class="g-ico" aria-hidden="true">🚙</span>
+            <div><strong>Saturday, Dec 19</strong><span>Dressed, packed &amp; ready by <b>9:00 AM SHARP</b>. We are NOT coming back!</span></div>
+          </li>
+          <li>
+            <span class="g-ico" aria-hidden="true">📲</span>
+            <div><strong>Download Splitwise</strong><span>Before the weekend, for Ubers &amp; shared expenses</span></div>
+          </li>
+        </ul>
+
+        <div class="picker-label">Now pick a page 💕</div>
+        <nav class="tiles" aria-label="Pages">
+          <a href="#welcome" class="tile" data-go="welcome"><span class="t-num">01</span><span class="t-name">Welcome</span><span class="t-sub">Hey ladies + the ground rules</span></a>
+          <a href="#money" class="tile" data-go="money"><span class="t-num">02</span><span class="t-name">Costs</span><span class="t-sub">$202 &amp; payment dates</span></a>
+          <a href="#friday" class="tile" data-go="friday"><span class="t-num">03</span><span class="t-name">Friday</span><span class="t-sub">Musiq + W Living Room</span></a>
+          <a href="#saturday" class="tile" data-go="saturday"><span class="t-num">04</span><span class="t-name">Saturday</span><span class="t-sub">Spa, get cute, dinner, darts</span></a>
+        </nav>
+      </div>
+    </section>
+
 
     <!-- ============================================================
          WELCOME
          ============================================================ -->
+    <div class="panel" data-panel="welcome" id="page-welcome">
     <section class="welcome section-pad" id="welcome">
       <div class="wrap">
         <div class="eyebrow reveal">Welcome</div>
@@ -1207,12 +1304,17 @@
             <p>Also, please download Splitwise before the weekend. We'll use it for things we actually need to split, like Ubers or shared expenses, so nobody is chasing anybody down afterward over <span class="amt">$17.43.</span></p>
           </div>
         </div>
+        <div class="next-page light">
+          <a href="#money" class="next-btn" data-go="money"><span class="np-k">Next page</span><span class="np-v">Okay... Let's Talk Money 💸 <span aria-hidden="true">→</span></span></a>
+        </div>
       </div>
     </section>
+    </div>
 
     <!-- ============================================================
          MONEY
          ============================================================ -->
+    <div class="panel" data-panel="money" id="page-money">
     <section class="money section-pad on-dark" id="money">
       <div class="wrap">
         <div class="eyebrow reveal" style="display:flex;justify-content:center">The Costs</div>
@@ -1308,12 +1410,17 @@
           <p class="big">After <strong>November 15</strong>, all of the major activities will already be paid for.</p>
           <p>During the actual weekend, you'll mainly just need money for your own food and drinks, your portion of transportation, and any optional extras.</p>
         </div>
+        <div class="next-page light">
+          <a href="#friday" class="next-btn" data-go="friday"><span class="np-k">Next page</span><span class="np-v">Friday: Musiq Soulchild 🎶 <span aria-hidden="true">→</span></span></a>
+        </div>
       </div>
     </section>
+    </div>
 
     <!-- ============================================================
          FUN TRANSITION
          ============================================================ -->
+    <div class="panel" data-panel="friday" id="page-friday">
     <section class="fun" id="fun">
       <div class="wrap">
         <h2 class="reveal">Okay... <em>NOW for the fun part!</em> 💃🏾</h2>
@@ -1387,12 +1494,17 @@
             </div>
           </li>
         </ol>
+        <div class="next-page dark">
+          <a href="#saturday" class="next-btn" data-go="saturday"><span class="np-k">Next page</span><span class="np-v">Saturday: the FULL day 💕 <span aria-hidden="true">→</span></span></a>
+        </div>
       </div>
     </section>
+    </div>
 
     <!-- ============================================================
          SATURDAY
          ============================================================ -->
+    <div class="panel" data-panel="saturday" id="page-saturday">
     <section class="saturday" id="saturday">
       <div class="wrap">
         <div class="day-head">
@@ -1579,14 +1691,15 @@
         </div>
       </div>
     </section>
+    </div>
   </main>
 
   <!-- Floating nav -->
   <nav class="nav" id="nav" aria-label="Sections">
-    <a href="#welcome" data-sec="welcome">Welcome</a>
-    <a href="#money" data-sec="money">Costs</a>
-    <a href="#friday" data-sec="friday">Friday</a>
-    <a href="#saturday" data-sec="saturday">Saturday</a>
+    <a href="#welcome" data-go="welcome">Welcome</a>
+    <a href="#money" data-go="money">Costs</a>
+    <a href="#friday" data-go="friday">Friday</a>
+    <a href="#saturday" data-go="saturday">Saturday</a>
   </nav>
 
   <button class="to-top" id="toTop" aria-label="Back to top">
@@ -1655,19 +1768,40 @@
         window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
       });
 
-      /* Highlight current section in nav */
-      var links = nav.querySelectorAll('a');
-      var map = { welcome: 'welcome', know: 'welcome', money: 'money', payments: 'money', fun: 'money', friday: 'friday', saturday: 'saturday', finale: 'saturday' };
-      if ('IntersectionObserver' in window) {
-        var sio = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            if (!e.isIntersecting) return;
-            var key = map[e.target.id];
-            links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-sec') === key); });
-          });
-        }, { rootMargin: '-45% 0px -50% 0px' });
-        Object.keys(map).forEach(function (id) { var s = document.getElementById(id); if (s) sio.observe(s); });
+      /* Pages: show one panel at a time */
+      var panels = document.querySelectorAll('.panel');
+      var goers = document.querySelectorAll('[data-go]');
+      function panelFor(id) {
+        var el = id && document.getElementById(id);
+        var p = el && el.closest('.panel');
+        return p ? p.getAttribute('data-panel') : null;
       }
+      function showPage(name, scroll) {
+        panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-panel') === name); });
+        goers.forEach(function (a) {
+          if (a.classList.contains('next-btn')) return;
+          a.classList.toggle('active', a.getAttribute('data-go') === name);
+        });
+        var active = document.querySelector('.panel.active');
+        if (scroll && active) {
+          active.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        }
+        onScroll();
+      }
+      goers.forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          var name = a.getAttribute('data-go');
+          showPage(name, true);
+          try { history.replaceState(null, '', '#' + name); } catch (err) {}
+        });
+      });
+      var start = panelFor(location.hash.slice(1));
+      showPage(start || 'welcome', !!start);
+      window.addEventListener('hashchange', function () {
+        var n = panelFor(location.hash.slice(1));
+        if (n) showPage(n, true);
+      });
     })();
   </script>
 </body>

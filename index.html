@@ -1090,6 +1090,13 @@
     .looks { display: grid; gap: 18px; margin-top: 30px; }
     .look { border-radius: var(--radius); padding: 24px 22px; position: relative; overflow: hidden; }
     .look-head { margin-bottom: 14px; }
+    .look-body { display: grid; grid-template-columns: 1fr 112px; gap: 12px; align-items: start; }
+    .look-img { width: 112px; height: auto; margin-top: -6px; filter: drop-shadow(0 12px 18px rgba(0, 0, 0, .35)); }
+    .look-text p:last-child { margin-bottom: 0; }
+    @media (min-width: 520px) {
+      .look-body { grid-template-columns: 1fr 150px; gap: 20px; }
+      .look-img { width: 150px; }
+    }
     .look-when {
       display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase;
       padding: 6px 11px; border-radius: 999px; margin-bottom: 10px;
@@ -1547,7 +1554,12 @@
               <span class="look-when">Friday Night</span>
               <h3>Musiq Soulchild + After Hours <span aria-hidden="true">🎶🥂</span></h3>
             </div>
+            <div class="look-body">
+              <div class="look-text">
             <p>We're starting the weekend with Musiq, so think <strong>concert cute / grown woman sexy</strong>. I'll be in the gold draped mini dress. Think heels, cute dresses, leather, denim, a little sparkle — whatever makes you feel GOOD.</p>
+              </div>
+              <img class="look-img" src="images/lewk-friday.webp" width="460" height="1096" alt="Illustration of a woman in a gold draped mini dress and gold heels holding a sparkly football clutch" loading="lazy" />
+            </div>
           </article>
 
           <article class="look look-spa reveal">
@@ -1555,7 +1567,12 @@
               <span class="look-when">Saturday Day</span>
               <h3>Spa Day <span aria-hidden="true">🧖🏾‍♀️✨</span></h3>
             </div>
+            <div class="look-body">
+              <div class="look-text">
             <p>Now we REST. 😂 I'll be in a beige/gold-ish sweatsuit, so think <strong>cute and comfortable</strong> — matching sets, sweatsuits, leggings, sneakers, whatever you want. The assignment is literally to relax.</p>
+              </div>
+              <img class="look-img" src="images/lewk-spa.webp" width="460" height="1117" alt="Illustration of a woman in a cream cropped sweatsuit and sneakers with sunglasses, an iced coffee and a designer bag" loading="lazy" />
+            </div>
           </article>
 
           <article class="look look-night reveal">
@@ -1563,9 +1580,14 @@
               <span class="look-when">Saturday Night</span>
               <h3>Birthday Dinner + Outsideeee <span aria-hidden="true">🥂💃🏾</span></h3>
             </div>
+            <div class="look-body">
+              <div class="look-text">
             <p class="pressure">And then… <strong>WE APPLY PRESSURE.</strong> 😂</p>
             <p>This is the main birthday-night LEWK. I'll be wearing the gold fringe dress, so bring out the outfit you've been waiting for an excuse to wear.</p>
             <p>Think <strong>birthday dinner, cocktails, dancing, grown &amp; sexy.</strong> Heels. Hair done. Face beat. Outfit outfitting. <strong>Do not play with me on C-Day.</strong> 😂</p>
+              </div>
+              <img class="look-img" src="images/lewk-night.webp" width="460" height="1061" alt="Illustration of a woman in a gold fringe dress and gold heels holding a sparkly pink phone" loading="lazy" />
+            </div>
           </article>
         </div>
 

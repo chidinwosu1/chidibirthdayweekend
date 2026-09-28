@@ -11,5 +11,8 @@ Every image spot on the site is filled. To swap one, replace the file below with
 | `dancing.webp`                | Friday — "NOW for the fun part!" pink section            |
 | `too-many-bags.webp`          | Saturday — inside the "VERY IMPORTANT" card              |
 | `bathroom-waiting.webp`       | Saturday — under "establish residency"                   |
+| `lewk-friday.webp`            | Lewks — Friday Night card                                |
+| `lewk-spa.webp`               | Lewks — Saturday Day (Spa) card                          |
+| `lewk-night.webp`             | Lewks — Saturday Night card                              |
 
 Transparent PNG/WebP images look best. If an image has a fake checkerboard "transparent" background baked in, it will need cleaning up first.

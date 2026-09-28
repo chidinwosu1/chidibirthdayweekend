@@ -1,4 +1,4 @@
-# Chidi's 40th · The Birthday Weekend
+# C-Day | Version 4.0 · The Birthday Weekend
 
 A single-page, mobile-first invitation + itinerary for Philadelphia, December 18–19, 2026.
 

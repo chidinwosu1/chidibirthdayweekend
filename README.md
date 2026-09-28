@@ -1,4 +1,4 @@
-# C-Day | Version 4.0 · The Birthday Weekend
+# C-Day: Version 4.0 — Same Chidi. Better Features.
 
 A single-page, mobile-first invitation + itinerary for Philadelphia, December 18–19, 2026.
 

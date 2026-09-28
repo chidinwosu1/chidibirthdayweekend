@@ -1046,6 +1046,85 @@
     .next-page.dark .np-k { color: #fff; opacity: .85; }
     .np-v { font-family: var(--serif); font-weight: 700; font-size: 22px; line-height: 1.25; }
 
+
+    /* ============================================================
+       LEWKS
+       ============================================================ */
+    .lewks {
+      background:
+        radial-gradient(90% 40% at 100% 0%, rgba(216, 180, 156, .45), transparent 70%),
+        radial-gradient(70% 35% at 0% 60%, rgba(247, 220, 214, .8), transparent 70%),
+        var(--cream);
+    }
+    .lewks-sub {
+      font-family: var(--script); font-style: italic; font-weight: 600;
+      font-size: clamp(24px, 7vw, 32px); line-height: 1.25; color: var(--fuchsia-deep);
+      margin: -12px 0 26px;
+    }
+    .bad-bish {
+      margin: 30px calc(var(--gutter) * -1);
+      padding: 38px var(--gutter);
+      background: var(--black); color: var(--cream);
+      text-align: center;
+    }
+    .bb-small { font-family: var(--script); font-style: italic; font-weight: 500; font-size: 22px; color: var(--blush); margin: 0; }
+    .bb-small em { color: var(--nude); }
+    .bb-big {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(34px, 10.5vw, 56px); line-height: 1.02;
+      margin: 12px 0 14px;
+      background: linear-gradient(100deg, #f7e1a8, #d4a24c 45%, #fff1c9 60%, #c8923a);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .gold-note {
+      display: grid; grid-template-columns: 56px 1fr; gap: 16px; align-items: start;
+      background: #fff; border-radius: var(--radius); padding: 22px 20px;
+      box-shadow: 0 20px 50px -30px rgba(14, 11, 13, .35);
+    }
+    .gold-swatch {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 25%, #fff4cf, #e2b65a 45%, #a8742a 100%);
+      box-shadow: 0 10px 22px -10px rgba(168, 116, 42, .8), inset 0 0 0 2px rgba(255,255,255,.4);
+    }
+    .gn-k { font-size: 11px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: #a8742a; margin-bottom: 6px; }
+    .looks { display: grid; gap: 18px; margin-top: 30px; }
+    .look { border-radius: var(--radius); padding: 24px 22px; position: relative; overflow: hidden; }
+    .look-head { margin-bottom: 14px; }
+    .look-when {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase;
+      padding: 6px 11px; border-radius: 999px; margin-bottom: 10px;
+    }
+    .look h3 { font-size: clamp(24px, 7vw, 30px); line-height: 1.15; }
+    .look-fri { background: var(--black); color: var(--cream); }
+    .look-fri .look-when { background: var(--fuchsia); color: #fff; }
+    .look-fri strong { color: var(--blush); }
+    .look-spa { background: #fff; border: 1px solid var(--blush-2); }
+    .look-spa .look-when { background: var(--blush); color: var(--fuchsia-deep); }
+    .look-spa strong { color: var(--fuchsia-deep); }
+    .look-night {
+      background: linear-gradient(155deg, var(--fuchsia), var(--fuchsia-deep));
+      color: #fff; box-shadow: 0 24px 50px -24px var(--fuchsia);
+    }
+    .look-night .look-when { background: var(--black); color: #f3cf7a; }
+    .look-night .pressure { font-family: var(--serif); font-size: 24px; line-height: 1.2; }
+    .look-night .pressure strong { font-weight: 900; }
+    .basically {
+      margin-top: 34px; text-align: center;
+      padding: 28px 20px 24px; border-radius: 26px;
+      border: 1px solid var(--nude);
+      background: rgba(255, 255, 255, .55);
+    }
+    .ba-k { font-size: 12px; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .basically ul { list-style: none; margin: 0; padding: 0; font-family: var(--serif); font-size: clamp(21px, 6vw, 26px); line-height: 1.35; }
+    .basically li { padding: 6px 0; }
+    .basically li span { font-style: italic; color: var(--fuchsia-deep); }
+    .basically li strong { font-weight: 900; }
+    .ba-emoji { font-size: 26px; margin-top: 8px; }
+    .tile-wide { grid-column: 1 / -1; }
+    @media (min-width: 720px) {
+      .bad-bish { margin-left: 0; margin-right: 0; border-radius: 28px; }
+    }
+
     /* ============================================================
        FLOATING NAV + BACK TO TOP
        ============================================================ */
@@ -1069,8 +1148,8 @@
     .nav.show { transform: translate(-50%, 0); opacity: 1; }
     .nav a {
       color: var(--cream); text-decoration: none;
-      font-size: 13.5px; font-weight: 500;
-      padding: 10px 14px; border-radius: 999px;
+      font-size: 13px; font-weight: 500;
+      padding: 10px 11px; border-radius: 999px;
       transition: background .25s, color .25s;
       white-space: nowrap;
     }
@@ -1139,8 +1218,8 @@
       .hero-foot { grid-area: foot; align-self: start; margin-top: 24px; }
       .hero-figure { grid-area: fig; width: 100%; max-width: 470px; margin: 0; }
     }
-    @media (max-width: 360px) {
-      .nav a { padding: 9px 10px; font-size: 12.5px; }
+    @media (max-width: 380px) {
+      .nav a { padding: 9px 8px; font-size: 12px; }
     }
   </style>
 </head>
@@ -1214,6 +1293,10 @@
             <div><strong>Saturday, Dec 19</strong><span>Dressed, packed &amp; ready by <b>9:00 AM SHARP</b>. We are NOT coming back!</span></div>
           </li>
           <li>
+            <span class="g-ico" aria-hidden="true">👗</span>
+            <div><strong>The Lewks</strong><span>I'm in <b>gold</b> — any other color is fair game. Saturday night is the main LEWK!</span></div>
+          </li>
+          <li>
             <span class="g-ico" aria-hidden="true">📲</span>
             <div><strong>Download Splitwise</strong><span>Before the weekend, for Ubers &amp; shared expenses</span></div>
           </li>
@@ -1223,8 +1306,9 @@
         <nav class="tiles" aria-label="Pages">
           <a href="#welcome" class="tile" data-go="welcome"><span class="t-num">01</span><span class="t-name">Welcome</span><span class="t-sub">Hey ladies + the ground rules</span></a>
           <a href="#money" class="tile" data-go="money"><span class="t-num">02</span><span class="t-name">Costs</span><span class="t-sub">$202 &amp; payment dates</span></a>
-          <a href="#friday" class="tile" data-go="friday"><span class="t-num">03</span><span class="t-name">Friday</span><span class="t-sub">Musiq + W Living Room</span></a>
-          <a href="#saturday" class="tile" data-go="saturday"><span class="t-num">04</span><span class="t-name">Saturday</span><span class="t-sub">Spa, get cute, dinner, darts</span></a>
+          <a href="#lewks" class="tile" data-go="lewks"><span class="t-num">03</span><span class="t-name">Lewks</span><span class="t-sub">What to wear (I'm in gold ✨)</span></a>
+          <a href="#friday" class="tile" data-go="friday"><span class="t-num">04</span><span class="t-name">Friday</span><span class="t-sub">Musiq + W Living Room</span></a>
+          <a href="#saturday" class="tile tile-wide" data-go="saturday"><span class="t-num">05</span><span class="t-name">Saturday</span><span class="t-sub">Spa, get cute, dinner, darts</span></a>
         </nav>
       </div>
     </section>
@@ -1422,6 +1506,79 @@
           <p class="big">After <strong>November 15</strong>, all of the major activities will already be paid for.</p>
           <p>During the actual weekend, you'll mainly just need money for your own food and drinks, your portion of transportation, and any optional extras.</p>
         </div>
+        <div class="next-page light">
+          <a href="#lewks" class="next-btn" data-go="lewks"><span class="np-k">Next page</span><span class="np-v">The Lewks 💅🏾 <span aria-hidden="true">→</span></span></a>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <!-- ============================================================
+         LEWKS
+         ============================================================ -->
+    <div class="panel" data-panel="lewks" id="page-lewks">
+    <section class="lewks section-pad" id="lewks">
+      <div class="wrap">
+        <div class="eyebrow reveal">The Dress Code</div>
+        <h2 class="section-title reveal">Lewks 💅🏾</h2>
+        <p class="lewks-sub reveal">Because C-Day: Version 4.0 requires a LEWK.</p>
+
+        <div class="reveal">
+          <p class="lead">Okay, so I know y'all know we have to celebrate <strong>C-Day: Version 4.0</strong> in style, right?! 😂</p>
+        </div>
+
+        <div class="bad-bish reveal">
+          <p class="bb-small">Because before there was <em>fine shyt</em>…</p>
+          <p class="bb-big">THERE WAS A BAD BISH.</p>
+          <p class="bb-small">And some things simply do not expire. 💅🏾</p>
+        </div>
+
+        <div class="gold-note reveal">
+          <div class="gold-swatch" aria-hidden="true"></div>
+          <div>
+            <p class="gn-k">Color check</p>
+            <p>For the weekend, <strong>I'll be wearing gold</strong>, so other than that, y'all can wear whatever colors you want! There's no strict color theme — just think cute, elevated, sexy, and ready for pictures.</p>
+          </div>
+        </div>
+
+        <div class="looks">
+          <article class="look look-fri reveal">
+            <div class="look-head">
+              <span class="look-when">Friday Night</span>
+              <h3>Musiq Soulchild + After Hours <span aria-hidden="true">🎶🥂</span></h3>
+            </div>
+            <p>We're starting the weekend with Musiq, so think <strong>concert cute / grown woman sexy</strong>. I'll be in the gold draped mini dress. Think heels, cute dresses, leather, denim, a little sparkle — whatever makes you feel GOOD.</p>
+          </article>
+
+          <article class="look look-spa reveal">
+            <div class="look-head">
+              <span class="look-when">Saturday Day</span>
+              <h3>Spa Day <span aria-hidden="true">🧖🏾‍♀️✨</span></h3>
+            </div>
+            <p>Now we REST. 😂 I'll be in a beige/gold-ish sweatsuit, so think <strong>cute and comfortable</strong> — matching sets, sweatsuits, leggings, sneakers, whatever you want. The assignment is literally to relax.</p>
+          </article>
+
+          <article class="look look-night reveal">
+            <div class="look-head">
+              <span class="look-when">Saturday Night</span>
+              <h3>Birthday Dinner + Outsideeee <span aria-hidden="true">🥂💃🏾</span></h3>
+            </div>
+            <p class="pressure">And then… <strong>WE APPLY PRESSURE.</strong> 😂</p>
+            <p>This is the main birthday-night LEWK. I'll be wearing the gold fringe dress, so bring out the outfit you've been waiting for an excuse to wear.</p>
+            <p>Think <strong>birthday dinner, cocktails, dancing, grown &amp; sexy.</strong> Heels. Hair done. Face beat. Outfit outfitting. <strong>Do not play with me on C-Day.</strong> 😂</p>
+          </article>
+        </div>
+
+        <div class="basically reveal">
+          <p class="ba-k">Basically:</p>
+          <ul>
+            <li><span>Friday</span> we're cute.</li>
+            <li><span>Saturday afternoon</span> we're cozy.</li>
+            <li><span>Saturday night?</span> We are a <strong>PROBLEM.</strong></li>
+          </ul>
+          <p class="ba-emoji" aria-hidden="true">😭😂✨</p>
+        </div>
+
         <div class="next-page light">
           <a href="#friday" class="next-btn" data-go="friday"><span class="np-k">Next page</span><span class="np-v">Friday: Musiq Soulchild 🎶 <span aria-hidden="true">→</span></span></a>
         </div>
@@ -1704,6 +1861,7 @@
   <nav class="nav" id="nav" aria-label="Sections">
     <a href="#welcome" data-go="welcome">Welcome</a>
     <a href="#money" data-go="money">Costs</a>
+    <a href="#lewks" data-go="lewks">Lewks</a>
     <a href="#friday" data-go="friday">Friday</a>
     <a href="#saturday" data-go="saturday">Saturday</a>
   </nav>

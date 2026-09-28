@@ -174,8 +174,15 @@
       display: flex; align-items: center; justify-content: center; gap: 12px;
       color: var(--nude);
       font-size: 11px; letter-spacing: .4em; text-transform: uppercase; font-weight: 700;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
+    .hero-invite {
+      font-family: var(--script); font-style: italic; font-weight: 500;
+      font-size: clamp(21px, 5.8vw, 26px); line-height: 1.3;
+      color: var(--blush);
+      margin: 0 0 18px;
+    }
+    .hero-invite strong { font-weight: 700; color: var(--cream); }
     .hero-ornament span { width: 34px; height: 1px; background: currentColor; opacity: .6; }
     .hero h1 {
       font-size: clamp(46px, 13.5vw, 88px);
@@ -1162,7 +1169,8 @@
 
     <div class="hero-inner">
       <div class="hero-text">
-        <div class="hero-ornament h-in" style="animation-delay:.1s"><span></span>You're Invited<span></span></div>
+        <div class="hero-ornament h-in" style="animation-delay:.1s"><span></span>✦<span></span></div>
+        <p class="hero-invite h-in" style="animation-delay:.15s">You are cordially invited<br />to the release of <strong>Chidi 4.0</strong></p>
         <h1 class="h-in" style="animation-delay:.25s"><span class="cday">C-Day</span> <em>Version 4.0</em></h1>
         <p class="hero-sub h-in" style="animation-delay:.45s">The Birthday Weekend</p>
         <p class="hero-date h-in" style="animation-delay:.6s"><span class="nw">December 18–19, 2026</span> <span class="nw">•&nbsp; Philadelphia</span></p>

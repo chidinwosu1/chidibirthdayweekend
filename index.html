@@ -825,6 +825,12 @@
       padding: 12px 14px; border-radius: 14px; background: rgba(250,244,236,.07); font-size: 15px;
     }
     .tickets .tk { font-size: 20px; }
+    .tickets .tk-warn {
+      display: block; margin-top: 8px; padding-top: 8px;
+      border-top: 1px solid rgba(255, 45, 149, .35);
+      color: var(--blush);
+    }
+    .tickets .tk-warn strong { color: var(--fuchsia); }
     .not-74 { font-family: var(--serif); font-style: italic; font-size: 21px; color: var(--blush); line-height: 1.35; }
 
     /* SATURDAY = day */
@@ -1673,7 +1679,7 @@
                 <p>City Winery serves food and drinks during the show, so if you're hungry, you'll be able to order something there.</p>
                 <p>If you're coming from Philly, feel free to meet us directly at City Winery.</p>
                 <p>Everyone should be there by <strong>9:00 PM</strong> so we have time to get seated and settled before the show starts at <strong>9:30</strong>.</p>
-                <div class="tickets"><span class="tk" aria-hidden="true">🎟️</span><span>I've already purchased 5 tickets for everyone who has confirmed with me so far.</span></div>
+                <div class="tickets"><span class="tk" aria-hidden="true">🎟️</span><span>I've already purchased 5 tickets for everyone who has <strong>confirmed and paid</strong> so far.<span class="tk-warn">If you have not made any payments yet, your ticket is <strong>not confirmed</strong>.</span></span></div>
                 <p>If you're staying at my house Friday night, you can come to my house first and we can get ready together before heading into Philly.</p>
 
                 <div class="leave-by">
